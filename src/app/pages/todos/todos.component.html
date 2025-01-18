@@ -1,0 +1,62 @@
+<p>todos works! this is todos</p>
+
+<p *ngif="!todoItemfromApi().length">Loading</p>
+<p>{{ todoItem()[0] }}</p>
+<p>{{ todoItem()[0].title }}</p>
+@for(todo of todoItem();track $index){
+<div
+  style="
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  "
+>
+  <p style="font-size: 16px; color: #444"><strong>ID:</strong> {{ todo.id }}</p>
+  <p style="font-size: 16px; color: #444">
+    <strong>Title:</strong> {{ todo.title }}
+  </p>
+  <p style="font-size: 16px; color: #444">
+    <strong>Completed:</strong> {{ todo.completed }}
+    <input
+      id="todo-{{ todo.completed }}"
+      type="checkbox"
+      [value]="todo.completed"
+    />
+    <label for="todo-{{ todo.completed }}">{{ todo.title }}</label>
+  </p>
+  <p style="font-size: 16px; color: #444">
+    <strong>User ID:</strong> {{ todo.userId }}
+  </p>
+</div>
+}
+<p>from Api</p>
+@for(todo of todoItemfromApi();track $index){
+<div
+  style="
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  "
+>
+  <p style="font-size: 16px; color: #444"><strong>ID:</strong> {{ todo.id }}</p>
+  <p style="font-size: 16px; color: #444">
+    <strong>Title:</strong> {{ todo.title }}
+  </p>
+  <p style="font-size: 16px; color: #444">
+    <strong>Completed:</strong> {{ todo.completed }}
+    <input
+      id="todo-{{ todo.completed }}"
+      type="checkbox"
+      [value]="todo.completed"
+    />
+    <label for="todo-{{ todo.completed }}">{{ todo.title }}</label>
+  </p>
+  <p style="font-size: 16px; color: #444">
+    <strong>User ID:</strong> {{ todo.userId }}
+  </p>
+</div>
+}

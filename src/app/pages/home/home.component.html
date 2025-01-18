@@ -1,0 +1,7 @@
+<p>home works!</p>
+<app-greeting [message]="'hello folly from home'"/>
+<app-greeting [message]="homeMessage()"/>
+<input type="text" (keyup)="KeyUpHandler()" placeholder="type shere"/>
+<button type="button" (click)="ClickHandler()">Submit</button>
+<input type="text" (keyup)="ClickEventHandler($event)" placeholder="type shere" />
+<app-counter/>

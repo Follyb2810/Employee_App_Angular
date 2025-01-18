@@ -1,0 +1,21 @@
+<p style="font-size: 18px; font-weight: bold; color: blue;">
+    Counter Value (counter): {{ counter }}
+  </p>
+  <p style="font-size: 18px; font-weight: bold; color: green;">
+    Counter Value (counterValue): {{ counterValue() }}
+  </p>
+  <p style="font-size: 18px; font-weight: bold; color: red;">
+    Counter Value (count): {{ count() }}
+  </p>
+  <div style="margin-top: 20px;">
+    <button (click)="increment()" style="margin-right: 10px; padding: 10px 20px; background-color: lightblue; border: none; border-radius: 5px; cursor: pointer;">
+      Increment
+    </button>
+    <button (click)="reset()" style="margin-right: 10px; padding: 10px 20px; background-color: lightgreen; border: none; border-radius: 5px; cursor: pointer;">
+      Reset
+    </button>
+    <button (click)="decrement()" style="padding: 10px 20px; background-color: lightcoral; border: none; border-radius: 5px; cursor: pointer;">
+      Decrement
+    </button>
+  </div>
+  

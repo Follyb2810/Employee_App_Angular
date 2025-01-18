@@ -1,0 +1,27 @@
+<header style="background-color: #f4f4f4; padding: 10px; border-bottom: 2px solid #ccc;">
+    <nav style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <h2 
+        routerLink="/" 
+        style="margin: 0; font-size: 24px; color: #333; cursor: pointer; text-decoration: none;"
+      >
+        {{ title }} {{ subTitle() }}
+      </h2>
+      <ul 
+        style="list-style: none; display: flex; margin: 0; padding: 0; gap: 15px;"
+      >
+        <li 
+          routerLink="/" 
+          style="cursor: pointer; color: #007bff; text-decoration: none; font-size: 18px; margin-right: 10px;"
+        >
+          Home
+        </li>
+        <li 
+          routerLink="/todos" 
+          style="cursor: pointer; color: #007bff; text-decoration: none; font-size: 18px;"
+        >
+          Todos
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
